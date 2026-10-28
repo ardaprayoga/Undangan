@@ -1,0 +1,26 @@
+{
+  "rules": {
+    "wishes": {
+      ".read": true,
+      "$wishId": {
+        ".write": "!data.exists()",
+        ".validate": "newData.hasChildren(['name', 'attendance', 'message', 'createdAt'])",
+        "name": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 70"
+        },
+        "attendance": {
+          ".validate": "newData.isString() && (newData.val() === 'Hadir' || newData.val() === 'Tidak dapat hadir' || newData.val() === 'Belum pasti')"
+        },
+        "message": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 500"
+        },
+        "createdAt": {
+          ".validate": "newData.isNumber()"
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    }
+  }
+}
