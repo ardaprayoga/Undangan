@@ -246,7 +246,7 @@ footer{padding:44px 20px 60px;text-align:center;background:#5c4148;color:#fff7f3
 
  
 <section class="section soft center" id="wishes"><div class="inner"><div class="kicker">Buku Tamu</div><h2>Kesan & Pesan</h2><p class="intro">Tinggalkan ucapan dan doa terbaik. Ucapan akan muncul untuk semua pengunjung setelah Firebase dikonfigurasi.</p>
- <form class="wish-form" id="wishForm">
+ <form id="wishForm" onsubmit="return false;">
   <label for="guestName">Nama</label><input id="guestName" name="guestName" placeholder="Nama Anda" maxlength="70" autocomplete="name" required>
   <label for="attendance">Konfirmasi kehadiran</label><select id="attendance" name="attendance"><option value="Hadir">Insyaallah hadir</option><option value="Tidak dapat hadir">Mohon maaf, belum bisa hadir</option><option value="Belum pasti">Belum dapat memastikan</option></select>
   <label for="message">Kesan, pesan, dan doa</label><textarea id="message" name="message" placeholder="Tuliskan ucapan Anda..." maxlength="500" required></textarea>
