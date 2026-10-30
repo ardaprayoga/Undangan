@@ -103,16 +103,16 @@ footer{padding:44px 20px 60px;text-align:center;background:#5c4148;color:#fff7f3
 <script>
 /* ===== KONFIGURASI: isi Firebase dan nomor WhatsApp di sini ===== */
 const FIREBASE_CONFIG = {
-  apiKey: "GANTI_DENGAN_API_KEY",
-  authDomain: "GANTI_DENGAN_PROJECT_ID.firebaseapp.com",
-  databaseURL: "GANTI_DENGAN_DATABASE_URL",
-  projectId: "GANTI_DENGAN_PROJECT_ID",
-  appId: "GANTI_DENGAN_APP_ID"
+  apiKey: "AIzaSyDvWgRE9_kpcq7FLw_n9d0VtpPnhswlKKM",
+  authDomain: "undangan-26892.firebaseapp.com",
+  databaseURL: "https://undangan-26892-default-rtdb.asia-southeast1.firebasedatabase.app/",
+  projectId: "undangan-26892",
+  appId: "1:720688774299:web:0aa5d6df0f3f2f1be21a3e"
 };
 // Nomor WhatsApp pasangan/keluarga dalam format internasional tanpa + atau spasi, contoh 62812xxxxxxx.
-const RSVP_WHATSAPP_NUMBER = "GANTI_DENGAN_NOMOR_WA";
+const RSVP_WHATSAPP_NUMBER = "6281376073209";
 const EVENT_DATE = new Date("2026-11-29T08:00:00+07:00"); // Ubah jam jika diperlukan.
-const FIREBASE_READY = FIREBASE_CONFIG.apiKey !== "GANTI_DENGAN_API_KEY"
+const FIREBASE_READY = FIREBASE_CONFIG.apiKey !== "AIzaSyDvWgRE9_kpcq7FLw_n9d0VtpPnhswlKKM"
   && FIREBASE_CONFIG.databaseURL.startsWith("https://")
   && !FIREBASE_CONFIG.projectId.includes("GANTI_DENGAN");
 /* ============================================================ */
@@ -178,7 +178,7 @@ updateCountdown(); setInterval(updateCountdown, 1000);
 const rsvpButton = document.getElementById("rsvpButton");
 function updateRsvpLink() {
   const number = RSVP_WHATSAPP_NUMBER.replace(/\D/g, "");
-  if (number && !number.includes("6281376073209")) {
+  if (number && !number.includes("GANTI")) {
     const message = "Assalamu’alaikum, saya ingin mengonfirmasi kehadiran pada pernikahan Edo Pratama & Miftahul Jannah, Minggu 29 November 2026. Nama: ";
     rsvpButton.href = "https://wa.me/" + number + "?text=" + encodeURIComponent(message);
   } else {
