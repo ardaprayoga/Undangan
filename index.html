@@ -317,11 +317,20 @@ document.getElementById("openInvitation").addEventListener("click", async () => 
 });
 musicButton.addEventListener("click", async () => audio.paused ? playMusic() : pauseMusic());
 
-document.getElementById("envelopeButton").addEventListener("click", () => {
-  const box = document.getElementById("envelopeBox");
-  box.classList.toggle("open");
-  document.getElementById("envelopeButton").textContent = box.classList.contains("open") ? "Tutup Amplop" : "Buka Amplop";
-});
+
+// Amplop digital (dijalankan hanya jika elemennya tersedia)
+const envelopeButton = document.getElementById("envelopeButton");
+const envelopeBox = document.getElementById("envelopeBox");
+
+if (envelopeButton && envelopeBox) {
+    envelopeButton.addEventListener("click", () => {
+        envelopeBox.classList.toggle("open");
+
+        envelopeButton.textContent = envelopeBox.classList.contains("open")
+            ? "Tutup Amplop"
+            : "Buka Amplop";
+    });
+}
 
 function updateCountdown() {
   const distance = EVENT_DATE.getTime() - Date.now();
