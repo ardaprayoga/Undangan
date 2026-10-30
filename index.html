@@ -178,7 +178,7 @@ updateCountdown(); setInterval(updateCountdown, 1000);
 const rsvpButton = document.getElementById("rsvpButton");
 function updateRsvpLink() {
   const number = RSVP_WHATSAPP_NUMBER.replace(/\D/g, "");
-  if (number && !number.includes("GANTI")) {
+  if (number && !number.includes("6281376073209")) {
     const message = "Assalamu’alaikum, saya ingin mengonfirmasi kehadiran pada pernikahan Edo Pratama & Miftahul Jannah, Minggu 29 November 2026. Nama: ";
     rsvpButton.href = "https://wa.me/" + number + "?text=" + encodeURIComponent(message);
   } else {
