@@ -112,9 +112,12 @@ const FIREBASE_CONFIG = {
 // Nomor WhatsApp pasangan/keluarga dalam format internasional tanpa + atau spasi, contoh 62812xxxxxxx.
 const RSVP_WHATSAPP_NUMBER = "6281376073209";
 const EVENT_DATE = new Date("2026-11-29T08:00:00+07:00"); // Ubah jam jika diperlukan.
-const FIREBASE_READY = FIREBASE_CONFIG.apiKey !== "AIzaSyDvWgRE9_kpcq7FLw_n9d0VtpPnhswlKKM"
-  && FIREBASE_CONFIG.databaseURL.startsWith("https://")
-  && !FIREBASE_CONFIG.projectId.includes("GANTI_DENGAN");
+const FIREBASE_READY = Boolean(
+    FIREBASE_CONFIG.apiKey &&
+    FIREBASE_CONFIG.databaseURL &&
+    FIREBASE_CONFIG.projectId &&
+    FIREBASE_CONFIG.appId
+);
 /* ============================================================ */
 
 const slides = [...document.querySelectorAll(".slides img")];
